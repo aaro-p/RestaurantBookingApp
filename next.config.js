@@ -1,8 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "resizer.otstatic.com",
+            },
+            {
+                protocol: "https",
+                hostname: "images.otstatic.com",
+            },
+        ],
+    },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
